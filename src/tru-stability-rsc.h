@@ -58,7 +58,7 @@ class TruStabilityRsc {
   TruStabilityRsc(SPIClass *spi, const uint8_t cs_ee, const uint8_t cs_adc) :
                   spi_(spi), cs_ee_(cs_ee), cs_adc_(cs_adc) {}
   void Config(SPIClass *spi, const uint8_t cs_ee, const uint8_t cs_adc);
-  void Begin();
+  bool Begin();
   void Read();
   void ConfigMode(const Mode rate);
   inline void temp_srd(const uint8_t srd) {srd_ = srd;}

@@ -34,7 +34,7 @@ void TruStabilityRsc::Config(SPIClass *spi, const uint8_t cs_ee,
   cs_adc_ = cs_adc;
 }
 
-void TruStabilityRsc::Begin() {
+bool TruStabilityRsc::Begin() {
   /* Configure the CS pins */
   pinMode(cs_ee_, OUTPUT);
   pinMode(cs_adc_, OUTPUT);
@@ -124,6 +124,7 @@ void TruStabilityRsc::Begin() {
   ReadData(3, buf_);
   pres_ = ConvertPres(3, buf_);
   pres_pa_ = pres_ * conv_to_pa_;
+  return true;
 }
 
 void TruStabilityRsc::ConfigMode(const Mode rate) {

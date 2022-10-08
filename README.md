@@ -67,7 +67,7 @@ bfs::TruStabilityRsc pres(&SPI, 20, 19);
 
 **void Config(SPIClass &ast;spi, const uint8_t cs_ee, const uint8_t cs_adc)** This is required when using the default constructor and sets up the SPI bus and chip select pins.
 
-**void Begin()** Initializes communication with the sensor. The communication bus is not initialized within this library and must be initialized seperately; this enhances compatibility with other sensors that may on the same bus.
+**bool Begin()** Initializes communication with the sensor. The communication bus is not initialized within this library and must be initialized seperately; this enhances compatibility with other sensors that may on the same bus.
 
 ```C++
 /* Initialize sensor */
