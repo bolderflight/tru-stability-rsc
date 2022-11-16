@@ -28,6 +28,7 @@
 
 #if defined(ARDUINO)
 #include <Arduino.h>
+#include "SPI.h"
 #else
 #include <cstddef>
 #include <cstdint>

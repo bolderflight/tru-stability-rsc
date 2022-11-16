@@ -30,7 +30,7 @@
 */
 bfs::TruStabilityRsc pres(&SPI, 20, 19);
 
-int main() {
+void setup() {
   /* Serial monitor for displaying data */
   Serial.begin(115200);
   while (!Serial) {}
@@ -39,13 +39,13 @@ int main() {
   pres.Begin();
   /* Set temperature SRD */
   pres.temp_srd(10);
-  while (1) {
-    /* Read and display data */
-    pres.Read();
-    Serial.print(pres.pres_pa());
-    Serial.print("\t");
-    Serial.println(pres.die_temp_c());
-    delay(100);
-  }
 }
 
+void loop() {
+  /* Read and display data */
+  pres.Read();
+  Serial.print(pres.pres_pa());
+  Serial.print("\t");
+  Serial.println(pres.die_temp_c());
+  delay(100);
+}

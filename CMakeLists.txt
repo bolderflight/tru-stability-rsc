@@ -12,7 +12,7 @@ if (DEFINED MCU)
   set(CMAKE_TOOLCHAIN_FILE "${mcu_support_SOURCE_DIR}/cmake/cortex.cmake")
   # Project information
   project(TruStabilityRsc
-    VERSION 1.0.2
+    VERSION 1.0.3
     DESCRIPTION "TruStability RSC sensor driver"
     LANGUAGES CXX
   )
